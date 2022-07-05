@@ -1,6 +1,7 @@
-# Repositorio-Grupal-A7-G4
-Proyecto integrador del grupo 4, Aula 7
-concepto de ceremonia y cuales son:
+#**Repositorio-Grupal-A7-G4**
+##Proyecto integrador del grupo 4, Aula 7
+
+###Concepto de ceremonia y cuales son:
 Las ceremonias de la metodología Scrum son elementos importantes del proceso de desarrollo de software de Agile. No son reuniones sólo por el hecho de reunirse. Más bien, estas ceremonias de Scrum proporcionan el marco para que los equipos realicen el trabajo de manera estructurada, ayuden a establecer expectativas, capaciten al equipo para colaborar de manera efectiva y, en última instancia, alcancen los resultados. Sin embargo, si no se administran de manera adecuada, pueden abrumar el calendario y bajar un poco el valor que deben proporcionar.
 ● Sprint Planning Meeting (reunión de planificación del sprint). Se produce al iniciar cada
 Sprint y tiene por objetivo decidir que se va a realizar en el Sprint.
@@ -15,13 +16,15 @@ finalizar el Sprint y tiene por objeto documentar qué ha funcionado y qué no h
 en el Sprint. La idea de dicha reunión es centrar al equipo en lo que salió bien y en lo que
 debe mejorar para la próxima iteración. De ninguna manera se centra en lo que salió mal.
 
-Artefactos de Scrum
+
+#**Artefactos de Scrum**
 
 Pila de producto (backlog product)
 Pila de Sprint
 Incremento
 
-Roles Scrum
+#**Roles Scrum**
+
 ●Product Owner (PO)
 ●Scrum master
 ●Development team
