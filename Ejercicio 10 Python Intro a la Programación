@@ -1,0 +1,8 @@
+Clientes = ["Juan", "Mario","Ariel","Josefina","Marianella"]
+Clientes.sort()
+print(Clientes)
+
+
+['Ariel', 'Josefina', 'Juan', 'Marianella', 'Mario']
+
+[Program finished]
