@@ -1,0 +1,52 @@
+# Repositorio-Grupal-A7-G4
+Proyecto integrador del grupo 4 del Aula 7
+CREATE DATABASE veterinario;
+Use veterinario;
+CREATE TABLE dueno(dniDueno INT NOT NULL UNIQUE,
+                   Nombre VARCHAR(50),
+                   Apellido varchar(50),
+                   Telefono varchar(50),
+                   Direccion varchar(50),
+                   PRIMARY KEY (dniDueno) );
+ CREATE TABLE perro(idPerro INT NOT NULL UNIQUE,
+                    NombreP VARCHAR(50),
+                    fechaNacimiento VARCHAR(50),
+                    Sexo VARCHAR(10),
+                    dni_du INT,
+                    PRIMARY KEY (idPerro),
+                    FOREIGN KEY(dni_du) REFERENCES dueno(dniDueno) );
+  CREATE TABLE historial(idHistori INT NOT NULL UNIQUE,
+                         fecha DATETIME,
+                         perro_p INT,
+                         descripcion VARCHAR(300),
+                         monto FLOAT,
+                         PRIMARY KEY(idHistori),
+                         FOREIGN KEY(perro_p) REFERENCES perro(idPerro) );
+ CREATE TABLE dueno_perro(dni_du1 INT NOT NULL UNIQUE,
+                          id_perro1 INT NOT NULL UNIQUE,
+                          FOREIGN KEY(dni_du1) REFERENCES dueno(dniDueno),
+                          FOREIGN KEY (id_perro1) REFERENCES perro (idPerro) );
+                    
+CREATE TABLE perro_historial(id_histo1 INT NOT NULL UNIQUE,
+                             id_perro2 INT NOT NULL UNIQUE,
+                             FOREIGN KEY (id_histo1) REFERENCES historial (idHistori),
+                             FOREIGN KEY (id_perro2) REFERENCES perro(idPerro) );
+ Use veterinario;    
+ INSERT INTO dueno VALUES (28957346,'Juan','Perez','4789689','Belgrano 101');
+  INSERT INTO dueno VALUES (23546987,'Maria','Perez','4789689','Pueyrredon 811');
+  INSERT INTO dueno VALUES (33117763,'Gabrila','Aguero','4700941','Cayetano 955');
+  
+  INSERT INTO perro VALUES (13,'Puppy','12/12/2012','Macho','28957346');
+  INSERT INTO perro VALUES (14,'Fido','12/12/2012','Macho','23546987');
+ INSERT INTO perro VALUES (15,'Veku','16/08/2010','Macho',33117763);
+ 
+ INSERT INTO historial VALUES (4422,25/11/2021,15,'Infeccion en las orejas, se trato con crema y antibioticos',2500);
+ INSERT INTO historial VALUES (2424,12/05/2013,13,'Se coloca vacuna anti-sarna',1500);
+ INSERT INTO historial VALUES (2535,18/11/2020,14,'se trato una infeccion en la pata izquierda delantera por mordida de otro perro',3800);
+ 
+ SELECT* FROM historial
+ UPDATE perro SET fechaNacimiento='25/09/2015'  WHERE idPerro =14;
+ SELECT* FROM perro
+ DELETE FROM historial WHERE idHistori=2424;
+ SELECT* FROM historial
+ UPDATE dueno SET Direccion='Libertad 123'  WHERE  dniDueno=23546987;
